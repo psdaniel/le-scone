@@ -52,7 +52,9 @@ table {
   border-spacing: 0;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -122,51 +124,51 @@ table {
 }
 
 .offset-1 {
-  margin-left: calc(8.33333% + gutter/2);
+  margin-left: calc(8.33333% + 10px);
 }
 
 .offset-2 {
-  margin-left: calc(16.66667% + gutter/2);
+  margin-left: calc(16.66667% + 10px);
 }
 
 .offset-3 {
-  margin-left: calc(25% + gutter/2);
+  margin-left: calc(25% + 10px);
 }
 
 .offset-4 {
-  margin-left: calc(33.33333% + gutter/2);
+  margin-left: calc(33.33333% + 10px);
 }
 
 .offset-5 {
-  margin-left: calc(41.66667% + gutter/2);
+  margin-left: calc(41.66667% + 10px);
 }
 
 .offset-6 {
-  margin-left: calc(50% + gutter/2);
+  margin-left: calc(50% + 10px);
 }
 
 .offset-7 {
-  margin-left: calc(58.33333% + gutter/2);
+  margin-left: calc(58.33333% + 10px);
 }
 
 .offset-8 {
-  margin-left: calc(66.66667% + gutter/2);
+  margin-left: calc(66.66667% + 10px);
 }
 
 .offset-9 {
-  margin-left: calc(75% + gutter/2);
+  margin-left: calc(75% + 10px);
 }
 
 .offset-10 {
-  margin-left: calc(83.33333% + gutter/2);
+  margin-left: calc(83.33333% + 10px);
 }
 
 .offset-11 {
-  margin-left: calc(91.66667% + gutter/2);
+  margin-left: calc(91.66667% + 10px);
 }
 
 .offset-12 {
-  margin-left: calc(100% + gutter/2);
+  margin-left: calc(100% + 10px);
 }
 
 @media screen and (max-width: 759px) {
@@ -196,7 +198,7 @@ table {
 }
 
 .container::after, .container::before {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -215,7 +217,7 @@ table {
 }
 
 .row::after, .row::before {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -239,13 +241,13 @@ img {
 
 p {
   font-family: "PT Mono", monospace;
-  font-size: 1.125/pxem;
+  font-size: 1.125em;
   line-height: 1.66667em;
 }
 
 .titulo {
   font-family: "PT Mono", monospace;
-  font-size: 1.125/pxem;
+  font-size: 1.125em;
   line-height: 1.66667em;
   text-transform: uppercase;
 }
@@ -269,6 +271,149 @@ p {
 @media screen and (min-width: 760px) and (max-width: 1199px) {
   .titulo::after {
     width: 60%;
+  }
+}
+
+.intro {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 759px) {
+  .intro {
+    margin-top: 20px;
+  }
+}
+
+.logo {
+  margin-bottom: 60px;
+}
+
+.intro-info {
+  border-right: 2px solid #2a2426;
+  max-width: 320px;
+}
+
+.intro-info p {
+  padding-top: 10px;
+}
+
+.intro-info p:first-child {
+  border-bottom: 2px solid #2a2426;
+  padding-bottom: 10px;
+}
+
+.intro-telefone {
+  color: #988c77;
+}
+
+@media screen and (max-width: 759px) {
+  .intro-telefone {
+    margin-bottom: 40px;
+  }
+}
+
+.intro-telefone::after {
+  content: '/ / / /';
+  display: block;
+  margin-top: 200px;
+  font-size: 220px;
+  letter-spacing: -90px;
+  color: #2a2426;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .intro-telefone::after {
+    margin-top: 80px;
+    font-size: 160px;
+    letter-spacing: -70px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .intro-telefone::after {
+    display: none;
+  }
+}
+
+.aberto {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #1ab912;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+.intro-foto {
+  border: 10px solid #cbc6b9;
+  width: 100%;
+}
+
+.menu {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 759px) {
+  .menu {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.menu-item {
+  margin-bottom: 60px;
+}
+
+.menu-item h2 {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.menu-item li {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  line-height: 1.94444em;
+}
+
+.menu-item li span {
+  font-family: "Aref Ruqaa", serif;
+  color: #988c77;
+  display: inline-block;
+  width: 70px;
+  margin-right: 10px;
+  text-align: right;
+  margin-left: -80px;
+}
+
+@media screen and (max-width: 759px) {
+  .menu-item li span {
+    margin-left: 0px;
+    width: auto;
+  }
+}
+
+.menu-item img {
+  border-radius: 50%;
+  border: 10px solid #cbc6b9;
+  position: absolute;
+  right: 0px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-item img {
+    right: 120px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .menu-item img {
+    width: 120px;
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

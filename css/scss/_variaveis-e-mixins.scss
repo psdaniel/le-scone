@@ -1,4 +1,4 @@
-// Cores 
+// Cores
 $bege-claro: #edece4;
 $bege-medio: #cbc6b9;
 $bege-escuro: #988c77;
@@ -9,26 +9,26 @@ $verde: #1ab912;
 $fonte-1: 'PT Mono', monospace;
 $fonte-2: 'Aref Ruqaa', serif;
 
-@function em($pixel, $contexto: 16px) {
-  @return $pixel / $contexto + em;
+@function em($pixel, $contexto: 16) {
+	@return $pixel / $contexto + em;
 }
 
 @mixin tipo-1($size) {
-  font-family: $fonte-1;
-  @if $size == 18 {
-    font-size: em(18);
-    line-height: em(30, 18);
-  }
+	font-family: $fonte-1;
+	@if $size == 18 {
+		font-size: em(18);
+		line-height: em(30, 18);
+	}
 }
 
 @mixin tipo-2($size) {
-  font-family: $fonte-2;
-  @if $size == 18 {
-    font-size: em(18);
-    line-height: em(30, 18);
-  }
-  @else if $size == 24 {
-    font-size: em(24);
-    line-height: em(30, 24);
-  }
+	font-family: $fonte-2;
+	@if $size == 18 {
+		font-size: em(18);
+		line-height: em(30, 18);
+	}
+	@else if $size == 24 {
+		font-size: em(24);
+		line-height: em(30, 24);
+	}
 }

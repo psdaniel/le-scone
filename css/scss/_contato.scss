@@ -1,0 +1,29 @@
+.contato {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @include d(s) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.contato-form {
+  label {
+    @include tipo-1(18);
+    display: block;
+  }
+  input[type="text"], textarea {
+    @include tipo-1(18);
+    color: $cinza;
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    border: 2px solid $bege-escuro;
+    background: transparent;
+    margin-bottom: 1em;
+    &:hover, &:focus {
+      outline: none;
+      border-color: $bege-medio;
+    }
+  }
+}
