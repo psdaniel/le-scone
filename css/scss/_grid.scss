@@ -1,3 +1,4 @@
+// Variaveis do grid
 $cols: 12;
 $gutter: 20px;
 $l-device: 1200px;
@@ -5,42 +6,42 @@ $m-device: 760px;
 $s-device: 480px;
 
 // Box-sizing
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-// Mixin de media-querie
+// Mixin de media-queries
 @mixin d($size) {
   @if $size == l {
     @media screen and (min-width: #{$l-device}) {
       @content;
     }
-  }
-  @else if $size == m {
-    @media screen and (min-width: #{$m-device}) and (max-width: $l-device - 1) {
+  } @else if $size == m {
+    @media screen and (min-width: #{$m-device}) and (max-width: #{$l-device - 1}) {
       @content;
     }
-  }
-  @else if $size == s {
-    @media screen and (max-width: $m-device - 1) {
+  } @else if $size == s {
+    @media screen and (max-width: #{$m-device - 1}) {
       @content;
     }
   }
 }
 
-// Grid function
+// Função do grid
 
 @function grid($col, $offset: false) {
   $width: $col / $cols * 100 + "%";
   $result: calc(#{$width} - #{$gutter});
   @if $offset == offset {
-    $gutter: gutter / 2;
+    $gutter: $gutter / 2;
     $result: calc(#{$width} + #{$gutter});
   }
   @return $result;
 }
 
-// Grid classes
+// Gera as classes de grid
 
 @for $i from 1 through $cols {
   .grid-#{$i} {
@@ -68,6 +69,7 @@ $s-device: 480px;
 }
 
 // Gera as classes de offset
+
 @for $i from 1 through $cols {
   .offset-#{$i} {
     margin-left: grid($i, offset);
@@ -82,9 +84,11 @@ $s-device: 480px;
 }
 
 // Mixin de clearfix
+
 @mixin clearfix {
-  &::after, &::before {
-    content: '';
+  &::after,
+  &::before {
+    content: "";
     display: table;
     clear: both;
   }
